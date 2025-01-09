@@ -1,0 +1,21 @@
+{
+  "name": "api_testauto_ds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "testDemo": "mocha ./test/test_demo.js",
+    "testGet": "mocha ./test/test_get.js",
+    "testPost": "mocha ./test/test_post.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "mocha": "^11.0.1",
+    "mochawesome": "^7.1.3",
+    "supertest": "^7.0.0"
+  }
+}
