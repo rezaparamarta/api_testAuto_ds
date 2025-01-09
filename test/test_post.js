@@ -4,8 +4,6 @@ chai.use(require('chai-json-schema'));
 const assert = chai.assert;
 const fs = require('fs');
 
-
-
 describe('API Test for "restful-api.dev"', () => {
     it('Test - POST New Object', async () => {
             const body = {
