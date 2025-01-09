@@ -7,14 +7,17 @@ describe('API Test for "restful-api.dev"', () => {
         const response = await request('https://api.restful-api.dev/')
             .get('objects');
 
-        // Assertion
-        assert.equal(response.statusCode, 200);
-
         // Log response
         if (response.statusCode === 200) {
-            console.log('Test Passed', response.body);
+
+            assert.equal(response.statusCode, 200);
+            assert.equal(response.body[0].id, 1);
+            assert.equal(response.body[0].name, 'Google Pixel 6 Pro');
+            assert.equal(response.body[0].data.color, 'Cloudy White');
+            console.log('Test Passed', response.body[0]);
         } else {
             console.log('Test Failed');
         }
+        //console.log(response.body);
     });
 });

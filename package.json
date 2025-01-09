@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
   "scripts": {
     "test": "mocha",
     "testDemo": "mocha ./test/test_demo.js",
     "testGet": "mocha ./test/test_get.js",
     "testPost": "mocha ./test/test_post.js"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,5 +17,8 @@
     "mocha": "^10.7.3",
     "mochawesome": "^7.1.3",
     "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "chai-json-schema": "^1.5.1"
   }
 }

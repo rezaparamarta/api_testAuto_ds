@@ -1,8 +1,15 @@
 const request = require('supertest');
+var chai = require('chai');
+chai.use(require('chai-json-schema'));
+const assert = chai.assert;
+const fs = require('fs');
+
+
 
 describe('API Test for "restful-api.dev"', () => {
     it('Test - POST New Object', async () => {
             const body = {
+               
                 "name": "Apple MacBook Pro 16",
                 "data": {
                     "year": 2019,
@@ -23,6 +30,10 @@ describe('API Test for "restful-api.dev"', () => {
         } else {
             console.log('Test Failed');
         }
-    
+
+        const schemaPath = './resources/jsonSchema/post-object-schema.json';
+        const jsonSchema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
+
+        assert.jsonSchema(response.body, jsonSchema);
     });
 });
